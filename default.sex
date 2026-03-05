@@ -1,0 +1,23 @@
+# SExtractor configuration for Euclid-like PSF extraction
+CATALOG_NAME     prelim_cat.ldac
+CATALOG_TYPE     FITS_LDAC
+PARAMETERS_NAME  default.param
+
+DETECT_MINAREA   5          # Minimum pixels above threshold
+DETECT_THRESH    3.0        # Detection threshold (sigma)
+ANALYSIS_THRESH  3.0        # Analysis threshold (sigma)
+
+FILTER           N          # Apply a filter for detection?
+FILTER_NAME      default.conv 
+
+DEBLEND_NTHRESH  32         # Number of deblending thresholds
+DEBLEND_MINCONT  0.005      # Minimum contrast parameter
+
+PHOT_APERTURES   5          # Aperture diameter in pixels
+PHOT_AUTOPARAMS  2.5, 3.5
+
+# Standard values
+SATUR_LEVEL      60000.0    # Adjust based on Euclid CCD saturation
+MAG_ZEROPOINT    24.0
+PIXEL_SCALE      0.1        # Euclid VIS is ~0.1 arcsec/pixel
+SEEING_FWHM      0.16       # Typical Euclid VIS PSF FWHM

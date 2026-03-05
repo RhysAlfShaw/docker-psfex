@@ -1,0 +1,18 @@
+# PSFEx configuration for Euclid
+BASIS_TYPE      PIXEL      # Use pixels directly (better for space-based)
+BASIS_NUMBER    20         # Number of basis functions
+PSF_SAMPLING    1        # Sampling step in pixels (use 0.5 for super-res)
+PSF_SIZE        232,232    # Must match VIGNET size in default.param
+
+# PSF vary across the field? 
+PSVAR_GROUPS    1          # Number of groups
+PSVAR_DEGREES   5          # Degree of polynomial variation (x, y)
+
+# Reject bad stars
+SAMPLE_FWHMRANGE 2, 5  # Reject cosmic rays or galaxies
+SAMPLE_VARIABILITY 0.2
+SAMPLE_MINSN     600.0      # Only use high-SNR stars for the model
+
+# Output
+CHECKIMAGE_TYPE  PROTOTYPES,CHI,SAMPLES
+CHECKIMAGE_NAME  proto.fits,chi.fits,samp.fits
